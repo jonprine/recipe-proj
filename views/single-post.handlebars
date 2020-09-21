@@ -1,0 +1,23 @@
+<div class="card bg-light mt-3"></div>
+{{> post-info post }}
+
+{{format_plural "Comment" comments.length}}
+{{> comments post.comments}}
+<div class="card bg-light mt-3"></div>
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+{{/if}}
+  <div>
+    <button type="submit">Add Comment</button>
+  </div>
+</form>
+
+
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
