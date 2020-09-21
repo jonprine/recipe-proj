@@ -65,7 +65,7 @@ function(accessToken, refreshToken, profile, cb) {
 passport.use(new FacebookStrategy({
   clientID: process.env.FACEBOOK_APP_ID,
   clientSecret: process.env.FACEBOOK_APP_SECRET,
-  callbackURL: "http://localhost:3001/auth/facebook/callback"
+  callbackURL: "https://tranquil-ridge-22533.herokuapp.com/auth/facebook/callback"
 },
 function(accessToken, refreshToken, profile, cb) {
   console.log(profile);
